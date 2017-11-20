@@ -15,11 +15,11 @@ import java.util.ArrayList;
 public class Main {
       public static void main(String[] args) {
          Logica l=new Logica();
-        l.cargar("text");
-       ArrayList<String> s = l.getUniversidad().darInformacionSedes();
+         l.cargar("text.txt");
+       ArrayList<String> m = l.getUniversidad().darInformacionSedes();
        ArrayList<String> f =l.getUniversidad().darInformacionTodosLosCursos();
-        for (int i = 0; i < s.size(); i++){
-            System.out.println(s.get(i));
+        for (int i = 0; i < m.size(); i++){
+            System.out.println(m.get(i));
                     
       
     }

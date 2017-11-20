@@ -31,9 +31,9 @@ public class Logica {
            try {
                leer = new Scanner(lectura);
                leer.useDelimiter(",");
-               String prox = prox = leer.next().trim();
+               String tipo = tipo = leer.next().trim();
                while(leer.hasNext()){
-                   switch (prox) {
+                   switch (tipo) {
                        case "SEC":
                            {
                                String nombre = leer.next().trim();
@@ -43,9 +43,9 @@ public class Logica {
                                String curso= leer.next();
                                this.getUniversidad().addSedeEducacionContinuada(nombre, direccion,telefono,area,curso);
                                int nsedes = this.getUniversidad().getSedes().size();
-                               prox = leer.next().trim();
-                               while (!((prox.equals("SP")||prox.equals("ST"))||prox.equals("SEC"))){
-                                   switch(prox){
+                               tipo = leer.next().trim();
+                               while (!((tipo.equals("SP")||tipo.equals("ST"))||tipo.equals("SEC"))){
+                                   switch(tipo){
                                        case "PEC":              
                                            String nombre1 = leer.next().trim();
                                            String descripcion = leer.next().trim();
@@ -57,8 +57,8 @@ public class Logica {
                                            break;
                                    }
                                    if(leer.hasNext()){
-                                       prox = leer.next().trim();
-                                       if((prox.equals("SP")||prox.equals("ST"))||prox.equals("SEC")){
+                                       tipo = leer.next().trim();
+                                       if((tipo.equals("SP")||tipo.equals("ST"))||tipo.equals("SEC")){
                                            break;
                                        }
                                    }else{break;}
@@ -73,9 +73,9 @@ public class Logica {
                                int numerodecursos= leer.nextInt();
                                this.getUniversidad().addSedeProfesional(nombre, direccion,telefono,area,numerodecursos);
                                int nsedes = this.getUniversidad().getSedes().size();
-                               prox = leer.next().trim();
-                               while (!((prox.equals("SP")||prox.equals("ST"))||prox.equals("SEC"))){
-                                   switch(prox){
+                               tipo = leer.next().trim();
+                               while (!((tipo.equals("SP")||tipo.equals("ST"))||tipo.equals("SEC"))){
+                                   switch(tipo){
                                        case "PEC":
 
                                             String nombre1 = leer.next().trim();
@@ -99,8 +99,8 @@ public class Logica {
                                            break;
                                    }
                                    if(leer.hasNext()){
-                                       prox = leer.next().trim();
-                                       if((prox.equals("SP")||prox.equals("ST"))||prox.equals("SEC")){
+                                       tipo = leer.next().trim();
+                                       if((tipo.equals("SP")||tipo.equals("ST"))||tipo.equals("SEC")){
                                            break;
                                        }
                                    }else{break;}
@@ -115,9 +115,9 @@ public class Logica {
                               
                                this.getUniversidad().addSedeTecnologica(nombre, direccion, telefono, area);
                                int nsedes = this.getUniversidad().getSedes().size();
-                               prox = leer.next().trim();
-                               while (!((prox.equals("SP")||prox.equals("ST"))||prox.equals("SEC"))){
-                                   switch(prox){
+                               tipo = leer.next().trim();
+                               while (!((tipo.equals("SP")||tipo.equals("ST"))||tipo.equals("SEC"))){
+                                   switch(tipo){
                                        case "PF":
                                            String nombre1 = leer.next().trim();
                                            String descripcion1 = leer.next().trim();
@@ -127,8 +127,8 @@ public class Logica {
                                  
                                    }
                                    if(leer.hasNext()){
-                                       prox = leer.next().trim();
-                                       if((prox.equals("SP")||prox.equals("ST"))||prox.equals("SEC")){
+                                       tipo = leer.next().trim();
+                                       if((tipo.equals("SP")||tipo.equals("ST"))||tipo.equals("SEC")){
                                            break;
                                        }
                                    }else{
